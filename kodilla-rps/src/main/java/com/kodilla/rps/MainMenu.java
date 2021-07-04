@@ -2,40 +2,40 @@ package com.kodilla.rps;
 
 import com.kodilla.rps.strings.MainMenuOptionsStrings;
 
-import java.util.Scanner;
-
 public class MainMenu {
 
     public int chosenOption;
-    private static boolean isOptionChosen = false;
-    MainMenuOptionsStrings mainMenuOptionsStrings = new MainMenuOptionsStrings();
-    Scanner scanner = new Scanner(System.in);
 
+    MainMenuOptionsStrings mainMenuOptionsStrings = new MainMenuOptionsStrings();
+    KeyboardReader keyboardReader = new KeyboardReader();
 
     public MainMenu(int chosenOption) {
         this.chosenOption = chosenOption;
     }
 
     public int runMainMenu() {
+        boolean isOptionChosen = false;
         while (!isOptionChosen) {
-            System.out.println(mainMenuOptionsStrings.welcomeString());
+            System.out.println("\n" + " -*****- " + "\n" + mainMenuOptionsStrings.welcomeString());
 
             while (!isOptionChosen) {
-                System.out.println(mainMenuOptionsStrings.optionNewGameString());
-                System.out.println(mainMenuOptionsStrings.optionExitString());
-                MainMenu.this.chosenOption = scanner.nextInt();
+                System.out.println(
+                        mainMenuOptionsStrings.optionNewPlayerGameString() + "\n" +
+                        mainMenuOptionsStrings.optionExitString() + "\n"
+                );
+                MainMenu.this.chosenOption = Integer.parseInt(keyboardReader.readKeyboard());
 
                 switch (chosenOption) {
                     case 1:
-                        System.out.println(mainMenuOptionsStrings.newGameString());
+                        System.out.println("\n" + mainMenuOptionsStrings.newPlayerString());
                         isOptionChosen = true;
                         break;
                     case 2:
-                        System.out.println(mainMenuOptionsStrings.exitGameString());
+                        System.out.println("\n" + mainMenuOptionsStrings.exitGameString());
                         isOptionChosen = true;
                         break;
                     default:
-                        System.out.println(mainMenuOptionsStrings.choiceString());
+                        System.out.println("\n" + mainMenuOptionsStrings.choiceString());
                 }
             }
         }

@@ -3,15 +3,15 @@ package com.kodilla.rps.strings;
 public class MainMenuOptionsStrings {
 
     public String welcomeString() {
-        return  "Hello new Player \nChose from the list:";
+        return  "Hello Player \nChose from the list:";
     }
 
-    public String optionNewGameString() {
-        return "1. New game.";
+    public String optionNewPlayerGameString() {
+        return "1. New player and game.";
     }
 
-    public String newGameString() {
-        return "Starting new game.";
+    public String newPlayerString() {
+        return "Creating new player.";
     }
 
     public String optionExitString() {

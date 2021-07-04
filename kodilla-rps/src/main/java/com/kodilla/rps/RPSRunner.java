@@ -2,29 +2,32 @@ package com.kodilla.rps;
 
 public class RPSRunner {
 
-    private boolean close() {
-        return true;
-    }
-
     public static void main(String[] args){
 
         boolean isGameEnd = false;
+        boolean isTheEnd;
+        int chosenOption;
 
         while (!isGameEnd) {
-            RPSRunner theGame = new RPSRunner();
+            //RPSRunner theGame = new RPSRunner();
             MainMenu mainMenu = new MainMenu(0);
-            int chosenOption = mainMenu.runMainMenu();
+            isTheEnd = false;
 
-            switch (chosenOption) {
-                case 1:
-                    NewGameCreator newGame = new NewGameCreator(false, false, new Player("", 0));
-                    newGame.createNewGameStep1();
-                    newGame.createNewGameStep2();
-                    newGame.runNewGame();
-                    break;
-                case 2:
-                    isGameEnd = theGame.close();
-                    break;
+            while (!isTheEnd) {
+                chosenOption = mainMenu.runMainMenu();
+                NewGameCreator newGame = new NewGameCreator(false, false, new Player("", 0));
+
+                switch (chosenOption) {
+                    case 1:
+                        newGame.createNewGameStep1();
+                        newGame.createNewGameStep2();
+                        newGame.runNewGame();
+                        break;
+                    case 2:
+                        isTheEnd = true;
+                        isGameEnd = true;
+                        break;
+                }
             }
         }
     }

@@ -2,8 +2,6 @@ package com.kodilla.rps;
 
 import com.kodilla.rps.strings.NewGameStrings;
 
-import java.util.Scanner;
-
 public class NewGameCreator {
 
     private boolean isThereName;
@@ -12,10 +10,7 @@ public class NewGameCreator {
     private int howManyWins;
 
     NewGameStrings newGameStrings = new NewGameStrings();
-    Scanner scanner = new Scanner(System.in);
-
-    public NewGameCreator() {
-    }
+    KeyboardReader keyboardReader = new KeyboardReader();
 
     public NewGameCreator(boolean isThereName, boolean isThereNumber, Player player) {
         this.isThereName = isThereName;
@@ -40,19 +35,11 @@ public class NewGameCreator {
         isThereNumber = thereNumber;
     }
 
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
-
     public boolean createNewGameStep1() {
         while (!isThereName()) {
             if (!isThereName()) {
                 System.out.println(newGameStrings.enterNameString());
-                String playerName = scanner.nextLine();
+                String playerName = keyboardReader.readKeyboard();
                 player.setPlayerName(playerName);
                 System.out.println(newGameStrings.helloPlayerString() + player.getPlayerName());
                 NewGameCreator.this.setThereName(true);
@@ -66,7 +53,7 @@ public class NewGameCreator {
         while (!isThereNumber()) {
             if (!isThereNumber()) {
                 System.out.println(newGameStrings.howManyWinsString());
-                player.setNumberOfWins(scanner.nextInt());
+                player.setNumberOfWins(Integer.parseInt(keyboardReader.readKeyboard()));
                 int k = player.getNumberOfWins();
 
                 if (k > 0) {                                                  //try to catch?
@@ -81,8 +68,8 @@ public class NewGameCreator {
         return isThereNumber;
     }
 
-    public void runNewGame() {
-        RSPGame rspGame = new RSPGame();
-        rspGame.runGame(howManyWins);
+    public int runNewGame() {
+        RPPGame3 RPPGame3 = new RPPGame3();
+        return RPPGame3.runGame3(howManyWins);
     }
 }

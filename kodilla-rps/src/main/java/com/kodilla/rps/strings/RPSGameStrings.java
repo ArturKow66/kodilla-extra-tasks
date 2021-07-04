@@ -23,7 +23,7 @@ public class RPSGameStrings {
     }
 
     public String yourChoiceString() {
-        return "You have chosen :";
+        return "You have chosen : ";
     }
 
     public String youWinString() {
@@ -48,5 +48,17 @@ public class RPSGameStrings {
 
     public String scoreString() {
         return "The score you vs. computer is: ";
+    }
+
+    public String stopGame() {
+        return "X. Exit game";
+    }
+
+    public String resetGame() {
+        return "N. Reset game";
+    }
+
+    public String computerChoiceString() {
+        return " Computer choose : ";
     }
 }

@@ -17,7 +17,7 @@ public class RPSRunnerTestSuite {
 
     @BeforeEach
     public void before() {
-        counter++;
+        counter = counter + 1;
         System.out.println("Test nr: " + counter);
     }
 
@@ -27,25 +27,16 @@ public class RPSRunnerTestSuite {
     }
 
     @Test
-    public void testDataEntrances() {
+    public void testNewPlayer() {
         //Given
         Player player1 = new Player("Artur", 5);
 
         //When
 
         //Then
-        Assertions.assertEquals(player1.getPlayerName(), "Artur");
-        Assertions.assertEquals(player1.getNumberOfWins(), 5);
+        Assertions.assertEquals("Artur", player1.getPlayerName());
+        Assertions.assertEquals(5, player1.getNumberOfWins());
 
-    }
-
-    @Test
-    public void testPlayerMove() {
-        //Given
-
-        //When
-
-        //Then
     }
 
     @Test

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.rps.RPSRunnerTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-07-04T16:52:28" hostname="DESKTOP-7UVQ050" time="0.042">
+<testsuite name="com.kodilla.rps.RPSRunnerTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-07-04T19:59:47" hostname="DESKTOP-7UVQ050" time="0.029">
   <properties/>
-  <testcase name="testStartNewGame()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.022"/>
-  <testcase name="testDataEntrances()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.008"/>
+  <testcase name="testStartNewGame()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.015"/>
   <testcase name="testQuitGame()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.001"/>
-  <testcase name="testResolute()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.001"/>
+  <testcase name="testNewPlayer()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.006"/>
+  <testcase name="testResolute()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.0"/>
   <testcase name="testScoreKeeper()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.001"/>
-  <testcase name="testPlayerMove()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.002"/>
   <testcase name="testNewRound()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.001"/>
   <system-out><![CDATA[Test Suite: begin
-Test nr: 1
 Test nr: 1
 Test nr: 1
 Test nr: 1

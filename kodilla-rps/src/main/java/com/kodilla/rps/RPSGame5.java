@@ -3,9 +3,8 @@ package com.kodilla.rps;
 import com.kodilla.rps.strings.RPSGameStrings;
 
 import java.util.Random;
-import java.util.Scanner;
-
-public class RSPGame {
+/*
+public class RPSGame5 {
 
     private double playerWinsCounter;
     private double computerWinsCounter;
@@ -15,9 +14,9 @@ public class RSPGame {
 
     RPSGameStrings rpsGameStrings = new RPSGameStrings();
     Random random = new Random();
-    Scanner scanner = new Scanner(System.in);
-    
-    public void runGame(int numberOfWins) {
+    KeyboardReader keyboardReader = new KeyboardReader();
+
+    public int runGame5(int numberOfWins) {
         while (!isRoundFinish) {
             gameCounter++;
 
@@ -27,29 +26,56 @@ public class RSPGame {
                         rpsGameStrings.gameChoseString() + "\n"+
                         rpsGameStrings.rockString() + "\n" +
                         rpsGameStrings.paperString() + "\n" +
-                        rpsGameStrings.scissorsString());
-
-                int rpsPlayerChoice = scanner.nextInt();
-                int rpsComputerChoice = random.nextInt(3) + 1;
+                        rpsGameStrings.scissorsString() + "\n" + "\n" +
+                        rpsGameStrings.stopGame() + "\n" +
+                        rpsGameStrings.resetGame()
+                );
 
                 String playerChoice = "";
+                String computerChoice = "";
+                int rpsPlayerChoiceInt = 0;
+                char[] rpsPlayerChoiceList = keyboardReader.readKeyboardToChar();
+                char rpsPlayerChoiceChar = rpsPlayerChoiceList[0];
+                int rpsComputerChoiceInt = random.nextInt(3) + 1;
 
-                switch (rpsPlayerChoice) {
-                    case 1:
+                switch (rpsPlayerChoiceChar) {
+                    case '1':
                         playerChoice = rpsGameStrings.rockString();
+                        rpsPlayerChoiceInt = Integer.valueOf(rpsPlayerChoiceChar);
+                        break;
+                    case '2':
+                        playerChoice = rpsGameStrings.paperString();
+                        rpsPlayerChoiceInt = Integer.valueOf(rpsPlayerChoiceChar);
+                        break;
+                    case '3':
+                        playerChoice = rpsGameStrings.scissorsString();
+                        rpsPlayerChoiceInt = Integer.valueOf(rpsPlayerChoiceChar);
+                        break;
+                    case 'n':
+                        runGame5(numberOfWins);
+                        break;
+                    case 'x':
+                        isThisGame = true;
+                        isRoundFinish = true;
+                        return numberOfWins;
+                }
+                switch (rpsComputerChoiceInt) {
+                    case 1:
+                        computerChoice = rpsGameStrings.rockString();
                         break;
                     case 2:
-                        playerChoice = rpsGameStrings.paperString();
+                        computerChoice = rpsGameStrings.paperString();
                         break;
                     case 3:
-                        playerChoice = rpsGameStrings.scissorsString();
+                        computerChoice = rpsGameStrings.scissorsString();
                         break;
                 }
-                System.out.println(rpsGameStrings.yourChoiceString() + playerChoice);
 
-                switch (rpsPlayerChoice) {
+                System.out.println(rpsGameStrings.yourChoiceString() + playerChoice + rpsGameStrings.computerChoiceString() + computerChoice);
+
+                switch (rpsPlayerChoiceInt) {
                     case 1:
-                        switch (rpsComputerChoice) {
+                        switch (rpsComputerChoiceInt) {
                             case 1:
                                 System.out.println(rpsGameStrings.tieString());
                                 break;
@@ -65,7 +91,7 @@ public class RSPGame {
                         isThisGame = true;
                         break;
                     case 2:
-                        switch (rpsComputerChoice) {
+                        switch (rpsComputerChoiceInt) {
                             case 1:
                                 System.out.println(rpsGameStrings.youWinString());
                                 playerWinsCounter = playerWinsCounter + 1;
@@ -81,7 +107,7 @@ public class RSPGame {
                         isThisGame = true;
                         break;
                     case 3:
-                        switch (rpsComputerChoice) {
+                        switch (rpsComputerChoiceInt) {
                             case 1:
                                 System.out.println(rpsGameStrings.computerWinString());
                                 computerWinsCounter = computerWinsCounter + 1;
@@ -98,19 +124,21 @@ public class RSPGame {
                         break;
                 }
             }
-            
+
             if (playerWinsCounter == numberOfWins) {
-                System.out.println(rpsGameStrings.youWonString());
                 System.out.println(rpsGameStrings.scoreString() + playerWinsCounter + " : " + computerWinsCounter);
+                System.out.println(rpsGameStrings.youWonString());
                 isRoundFinish = true;
             } else if (computerWinsCounter == numberOfWins) {
-                System.out.println(rpsGameStrings.youLostString());
                 System.out.println(rpsGameStrings.scoreString() + playerWinsCounter + " : " + computerWinsCounter);
+                System.out.println(rpsGameStrings.youLostString());
                 isRoundFinish = true;
             } else {
                 System.out.println(rpsGameStrings.scoreString() + playerWinsCounter + " : " + computerWinsCounter);
                 isThisGame = false;
             }
         }
+        return numberOfWins;
     }
 }
+*/
