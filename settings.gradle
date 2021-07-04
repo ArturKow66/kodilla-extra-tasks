@@ -1,0 +1,5 @@
+rootProject.name = 'kodilla-course'
+include 'kodilla-com.kodilla.sudoku'
+include 'kodilla-rps'
+include 'kodilla-sudoku'
+
