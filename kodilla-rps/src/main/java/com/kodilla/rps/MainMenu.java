@@ -20,17 +20,19 @@ public class MainMenu {
 
             while (!isOptionChosen) {
                 System.out.println(
-                        mainMenuOptionsStrings.optionNewPlayerGameString() + "\n" +
+                        mainMenuOptionsStrings.optionGame3String() + "\n" +
+                        mainMenuOptionsStrings.optionGame5String() + "\n" +
                         mainMenuOptionsStrings.optionExitString() + "\n"
                 );
                 MainMenu.this.chosenOption = Integer.parseInt(keyboardReader.readKeyboard());
 
                 switch (chosenOption) {
                     case 1:
+                    case 2:
                         System.out.println("\n" + mainMenuOptionsStrings.newPlayerString());
                         isOptionChosen = true;
                         break;
-                    case 2:
+                    case 3:
                         System.out.println("\n" + mainMenuOptionsStrings.exitGameString());
                         isOptionChosen = true;
                         break;

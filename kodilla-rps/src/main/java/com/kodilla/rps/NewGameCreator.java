@@ -68,8 +68,13 @@ public class NewGameCreator {
         return isThereNumber;
     }
 
-    public int runNewGame() {
-        RPPGame3 RPPGame3 = new RPPGame3();
-        return RPPGame3.runGame3(howManyWins);
+    public int runNewGame3() {
+        RPPGame3 rppGame3 = new RPPGame3();
+        return rppGame3.runGame3(howManyWins);
+    }
+
+    public int runNewGame5() {
+        RPSGame5 rpsGame5 = new RPSGame5();
+        return rpsGame5.runGame5(howManyWins);
     }
 }

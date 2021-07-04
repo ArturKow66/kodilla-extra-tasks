@@ -21,7 +21,6 @@ public class RPPGame3 {
         while (!isRoundFinish) {
             gameCounter++;
 
-
             while (!isThisGame){
                 System.out.println("\n" + "\n" +
                         rpsGameStrings.gameCountString() + gameCounter + "\n" +
@@ -48,11 +47,11 @@ public class RPPGame3 {
                         break;
                     case '2':
                         playerChoice = rpsGameStrings.paperString();
-                        rpsPlayerChoiceInt = Integer.valueOf(rpsPlayerChoiceChar);
+                        rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
                         break;
                     case '3':
                         playerChoice = rpsGameStrings.scissorsString();
-                        rpsPlayerChoiceInt = Integer.valueOf(rpsPlayerChoiceChar);
+                        rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
                         break;
                     case 'n':
                         gameCounter = 0;

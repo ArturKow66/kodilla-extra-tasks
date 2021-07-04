@@ -6,16 +6,20 @@ public class MainMenuOptionsStrings {
         return  "Hello Player \nChose from the list:";
     }
 
-    public String optionNewPlayerGameString() {
-        return "1. New player and game.";
+    public String optionGame3String() {
+        return "1. New classic game.";
+    }
+
+    public String optionGame5String() {
+        return "2. New R,P,S,L,S game.";
+    }
+
+    public String optionExitString() {
+        return "3. Exit game.";
     }
 
     public String newPlayerString() {
         return "Creating new player.";
-    }
-
-    public String optionExitString() {
-        return "2. Exit game.";
     }
 
     public String exitGameString() {

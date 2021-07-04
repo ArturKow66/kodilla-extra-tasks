@@ -22,6 +22,14 @@ public class RPSGameStrings {
         return "3. Scissors";
     }
 
+    public String spockString() {
+        return "4. Spock";
+    }
+
+    public String lizardString() {
+        return "5. Lizard";
+    }
+
     public String yourChoiceString() {
         return "You have chosen : ";
     }

@@ -9,7 +9,6 @@ public class RPSRunner {
         int chosenOption;
 
         while (!isGameEnd) {
-            //RPSRunner theGame = new RPSRunner();
             MainMenu mainMenu = new MainMenu(0);
             isTheEnd = false;
 
@@ -21,9 +20,14 @@ public class RPSRunner {
                     case 1:
                         newGame.createNewGameStep1();
                         newGame.createNewGameStep2();
-                        newGame.runNewGame();
+                        newGame.runNewGame3();
                         break;
                     case 2:
+                        newGame.createNewGameStep1();
+                        newGame.createNewGameStep2();
+                        newGame.runNewGame5();
+                        break;
+                    case 3:
                         isTheEnd = true;
                         isGameEnd = true;
                         break;
