@@ -17,7 +17,7 @@ public class RPSGame5 {
     Random random = new Random();
     KeyboardReader keyboardReader = new KeyboardReader();
 
-    public int runGame5(int numberOfWins) {
+    public int runGame5(int gameVersion, int numberOfWins) {
         while (!isRoundFinish) {
             gameCounter++;
 
@@ -66,7 +66,7 @@ public class RPSGame5 {
                         gameCounter = 0;
                         playerWinsCounter = 0;
                         computerWinsCounter = 0;
-                        runGame5(numberOfWins);
+                        runGame5(gameVersion, numberOfWins);
                         break;
                     case 'x':
                         isThisGame = true;
@@ -77,7 +77,7 @@ public class RPSGame5 {
                         break;
                     default:
                         gameCounter = gameCounter - 1;
-                        runGame5(numberOfWins);
+                        runGame5(gameVersion, numberOfWins);
                         break;
                 }
                 switch (rpsComputerChoiceInt) {

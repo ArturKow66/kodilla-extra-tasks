@@ -2,19 +2,21 @@ com/kodilla/rps/Player.java
  com.kodilla.rps.Player
 com/kodilla/rps/KeyboardReader.java
  com.kodilla.rps.KeyboardReader
-com/kodilla/rps/strings/NewGameStrings.java
- com.kodilla.rps.strings.NewGameStrings
-com/kodilla/rps/RPSRunner.java
- com.kodilla.rps.RPSRunner
 com/kodilla/rps/strings/RPSGameStrings.java
  com.kodilla.rps.strings.RPSGameStrings
-com/kodilla/rps/strings/MainMenuOptionsStrings.java
- com.kodilla.rps.strings.MainMenuOptionsStrings
 com/kodilla/rps/MainMenu.java
  com.kodilla.rps.MainMenu
-com/kodilla/rps/RPPGame3.java
- com.kodilla.rps.RPPGame3
+com/kodilla/rps/strings/MainMenuOptionsStrings.java
+ com.kodilla.rps.strings.MainMenuOptionsStrings
+com/kodilla/rps/strings/NewGameStrings.java
+ com.kodilla.rps.strings.NewGameStrings
 com/kodilla/rps/RPSGame5.java
  com.kodilla.rps.RPSGame5
+com/kodilla/rps/InGameMenu.java
+ com.kodilla.rps.InGameMenu
+com/kodilla/rps/RPPGame3.java
+ com.kodilla.rps.RPPGame3
+com/kodilla/rps/RPSRunner.java
+ com.kodilla.rps.RPSRunner
 com/kodilla/rps/NewGameCreator.java
  com.kodilla.rps.NewGameCreator

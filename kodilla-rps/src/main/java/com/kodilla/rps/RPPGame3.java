@@ -15,30 +15,19 @@ public class RPPGame3 {
 
     RPSGameStrings rpsGameStrings = new RPSGameStrings();
     Random random = new Random();
-    KeyboardReader keyboardReader = new KeyboardReader();
+    InGameMenu inGameMenu = new InGameMenu();
     
-    public int runGame3(int numberOfWins) {
+    public int runGame3(int gameVersion, int numberOfWins) {
         while (!isRoundFinish) {
             gameCounter++;
 
             while (!isThisGame){
-                System.out.println("\n" + "\n" +
-                        rpsGameStrings.GAME_COUNT_STRING + gameCounter + "\n" +
-                        rpsGameStrings.GAME_CHOICE_STRING + "\n"+
-                        rpsGameStrings.ROCK_STRING + "\n" +
-                        rpsGameStrings.PAPER_STRING + "\n" +
-                        rpsGameStrings.SCISSORS_STRING + "\n" + "\n" +
-                        rpsGameStrings.STOP_GAME_STRING + "\n" +
-                        rpsGameStrings.RESET_GAME_STRING
-                );
-
                 String playerChoice = "";
                 String computerChoice = "";
                 int rpsPlayerChoiceInt = 0;
-                char[] rpsPlayerChoiceList = keyboardReader.readKeyboardToChar();
-                char rpsPlayerChoiceChar = rpsPlayerChoiceList[0];
                 int rpsComputerChoiceInt = random.nextInt(3) + 1;
 
+                char rpsPlayerChoiceChar = inGameMenu.runInGameMenu(gameVersion, gameCounter);
 
                 switch (rpsPlayerChoiceChar) {
                     case '1':
@@ -57,7 +46,7 @@ public class RPPGame3 {
                         gameCounter = 0;
                         playerWinsCounter = 0;
                         computerWinsCounter = 0;
-                        runGame3(numberOfWins);
+                        runGame3(gameVersion, numberOfWins);
                         break;
                     case 'x':
                         isThisGame = true;
@@ -68,7 +57,7 @@ public class RPPGame3 {
                         break;
                     default:
                         gameCounter = gameCounter - 1;
-                        runGame3(numberOfWins);
+                        runGame3(gameVersion, numberOfWins);
                         break;
                 }
 

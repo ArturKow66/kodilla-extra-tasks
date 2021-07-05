@@ -70,11 +70,11 @@ public class NewGameCreator {
 
     public int runNewGame3() {
         RPPGame3 rppGame3 = new RPPGame3();
-        return rppGame3.runGame3(howManyWins);
+        return rppGame3.runGame3(1, howManyWins);
     }
 
     public int runNewGame5() {
         RPSGame5 rpsGame5 = new RPSGame5();
-        return rpsGame5.runGame5(howManyWins);
+        return rpsGame5.runGame5(2, howManyWins);
     }
 }
