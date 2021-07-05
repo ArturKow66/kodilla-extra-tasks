@@ -38,13 +38,13 @@ public class NewGameCreator {
     public boolean createNewGameStep1() {
         while (!isThereName()) {
             if (!isThereName()) {
-                System.out.println(newGameStrings.enterNameString());
+                System.out.println(newGameStrings.ENTER_NAME_STRING);
                 String playerName = keyboardReader.readKeyboard();
                 player.setPlayerName(playerName);
-                System.out.println(newGameStrings.helloPlayerString() + player.getPlayerName());
+                System.out.println(newGameStrings.HELLO_PLAYER_STRING + player.getPlayerName());
                 NewGameCreator.this.setThereName(true);
             } else {
-                System.out.println(newGameStrings.ifNoNameString());
+                System.out.println(newGameStrings.IF_NO_NAME_STRING);
             }
         }
         return NewGameCreator.this.setThereName(true);
@@ -52,16 +52,16 @@ public class NewGameCreator {
     public boolean createNewGameStep2() {
         while (!isThereNumber()) {
             if (!isThereNumber()) {
-                System.out.println(newGameStrings.howManyWinsString());
+                System.out.println(newGameStrings.HOW_MANY_WINS_STRING);
                 player.setNumberOfWins(Integer.parseInt(keyboardReader.readKeyboard()));
                 int k = player.getNumberOfWins();
 
                 if (k > 0) {                                                  //try to catch?
-                    System.out.println(newGameStrings.numberOfWinsString() + k );
+                    System.out.println(newGameStrings.NUMBER_OF_WINS_STRING + k );
                     howManyWins = k;
                     NewGameCreator.this.setThereNumber(true);
                 } else {
-                    System.out.println(newGameStrings.ifNoWinsString());
+                    System.out.println(newGameStrings.IF_NO_WINS_TO_PLAY_STRING);
                 }
             }
         }

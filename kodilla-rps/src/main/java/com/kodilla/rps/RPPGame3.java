@@ -23,13 +23,13 @@ public class RPPGame3 {
 
             while (!isThisGame){
                 System.out.println("\n" + "\n" +
-                        rpsGameStrings.gameCountString() + gameCounter + "\n" +
-                        rpsGameStrings.gameChoseString() + "\n"+
-                        rpsGameStrings.rockString() + "\n" +
-                        rpsGameStrings.paperString() + "\n" +
-                        rpsGameStrings.scissorsString() + "\n" + "\n" +
-                        rpsGameStrings.stopGame() + "\n" +
-                        rpsGameStrings.resetGame()
+                        rpsGameStrings.GAME_COUNT_STRING + gameCounter + "\n" +
+                        rpsGameStrings.GAME_CHOICE_STRING + "\n"+
+                        rpsGameStrings.ROCK_STRING + "\n" +
+                        rpsGameStrings.PAPER_STRING + "\n" +
+                        rpsGameStrings.SCISSORS_STRING + "\n" + "\n" +
+                        rpsGameStrings.STOP_GAME_STRING + "\n" +
+                        rpsGameStrings.RESET_GAME_STRING
                 );
 
                 String playerChoice = "";
@@ -42,15 +42,15 @@ public class RPPGame3 {
 
                 switch (rpsPlayerChoiceChar) {
                     case '1':
-                        playerChoice = rpsGameStrings.rockString();
+                        playerChoice = rpsGameStrings.ROCK_STRING;
                         rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
                         break;
                     case '2':
-                        playerChoice = rpsGameStrings.paperString();
+                        playerChoice = rpsGameStrings.PAPER_STRING;
                         rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
                         break;
                     case '3':
-                        playerChoice = rpsGameStrings.scissorsString();
+                        playerChoice = rpsGameStrings.SCISSORS_STRING;
                         rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
                         break;
                     case 'n':
@@ -74,16 +74,16 @@ public class RPPGame3 {
 
                 switch (rpsComputerChoiceInt) {
                     case 1:
-                        computerChoice = rpsGameStrings.rockString();
-                        System.out.println(rpsGameStrings.yourChoiceString() + playerChoice + rpsGameStrings.computerChoiceString() + computerChoice);
+                        computerChoice = rpsGameStrings.ROCK_STRING;
+                        System.out.println(rpsGameStrings.YOUR_CHOICE_STRING + playerChoice + rpsGameStrings.COMPUTER_CHOICE_STRING + computerChoice);
                         break;
                     case 2:
-                        computerChoice = rpsGameStrings.paperString();
-                        System.out.println(rpsGameStrings.yourChoiceString() + playerChoice + rpsGameStrings.computerChoiceString() + computerChoice);
+                        computerChoice = rpsGameStrings.PAPER_STRING;
+                        System.out.println(rpsGameStrings.YOUR_CHOICE_STRING + playerChoice + rpsGameStrings.COMPUTER_CHOICE_STRING + computerChoice);
                         break;
                     case 3:
-                        computerChoice = rpsGameStrings.scissorsString();
-                        System.out.println(rpsGameStrings.yourChoiceString() + playerChoice + rpsGameStrings.computerChoiceString() + computerChoice);
+                        computerChoice = rpsGameStrings.SCISSORS_STRING;
+                        System.out.println(rpsGameStrings.YOUR_CHOICE_STRING + playerChoice + rpsGameStrings.COMPUTER_CHOICE_STRING + computerChoice);
                         break;
                     default:
                         break;
@@ -93,14 +93,14 @@ public class RPPGame3 {
                     case 1:
                         switch (rpsComputerChoiceInt) {
                             case 1:
-                                System.out.println(rpsGameStrings.tieString());
+                                System.out.println(rpsGameStrings.TIE_STRING);
                                 break;
                             case 2:
-                                System.out.println(rpsGameStrings.computerWinString());
+                                System.out.println(rpsGameStrings.COMPUTER_WINS_STRING);
                                 computerWinsCounter = computerWinsCounter + 1;
                                 break;
                             case 3:
-                                System.out.println(rpsGameStrings.youWinString());
+                                System.out.println(rpsGameStrings.YOU_WIN_STRING);
                                 playerWinsCounter = playerWinsCounter + 1;
                                 break;
                         }
@@ -109,14 +109,14 @@ public class RPPGame3 {
                     case 2:
                         switch (rpsComputerChoiceInt) {
                             case 1:
-                                System.out.println(rpsGameStrings.youWinString());
+                                System.out.println(rpsGameStrings.YOU_WIN_STRING);
                                 playerWinsCounter = playerWinsCounter + 1;
                                 break;
                             case 2:
-                                System.out.println(rpsGameStrings.tieString());
+                                System.out.println(rpsGameStrings.TIE_STRING);
                                 break;
                             case 3:
-                                System.out.println(rpsGameStrings.computerWinString());
+                                System.out.println(rpsGameStrings.COMPUTER_WINS_STRING);
                                 computerWinsCounter = computerWinsCounter + 1;
                                 break;
                         }
@@ -125,15 +125,15 @@ public class RPPGame3 {
                     case 3:
                         switch (rpsComputerChoiceInt) {
                             case 1:
-                                System.out.println(rpsGameStrings.computerWinString());
+                                System.out.println(rpsGameStrings.COMPUTER_WINS_STRING);
                                 computerWinsCounter = computerWinsCounter + 1;
                                 break;
                             case 2:
-                                System.out.println(rpsGameStrings.youWinString());
+                                System.out.println(rpsGameStrings.YOU_WIN_STRING);
                                 playerWinsCounter = playerWinsCounter + 1;
                                 break;
                             case 3:
-                                System.out.println(rpsGameStrings.tieString());
+                                System.out.println(rpsGameStrings.TIE_STRING);
                                 break;
                         }
                         isThisGame = true;
@@ -144,18 +144,18 @@ public class RPPGame3 {
             }
             
             if (playerWinsCounter == numberOfWins) {
-                System.out.println(rpsGameStrings.scoreString() + playerWinsCounter + " : " + computerWinsCounter);
-                System.out.println(rpsGameStrings.youWonString());
+                System.out.println(rpsGameStrings.SCORE_STRING + playerWinsCounter + " : " + computerWinsCounter);
+                System.out.println(rpsGameStrings.YOU_WON_GAME_STRING);
                 isRoundFinish = true;
             } else if (computerWinsCounter == numberOfWins) {
-                System.out.println(rpsGameStrings.scoreString() + playerWinsCounter + " : " + computerWinsCounter);
-                System.out.println(rpsGameStrings.youLostString());
+                System.out.println(rpsGameStrings.SCORE_STRING + playerWinsCounter + " : " + computerWinsCounter);
+                System.out.println(rpsGameStrings.YOU_LOST_GAME_STRING);
                 isRoundFinish = true;
             } else if (closeThisGame) {
                 System.out.println();
                 return 0;
             } else {
-                System.out.println(rpsGameStrings.scoreString() + playerWinsCounter + " : " + computerWinsCounter);
+                System.out.println(rpsGameStrings.SCORE_STRING + playerWinsCounter + " : " + computerWinsCounter);
                 isThisGame = false;
             }
         }

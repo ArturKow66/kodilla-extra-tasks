@@ -2,31 +2,17 @@ package com.kodilla.rps.strings;
 
 public class MainMenuOptionsStrings {
 
-    public String welcomeString() {
-        return  "Hello Player \nChose from the list:";
-    }
+    public static final String WELCOME_STRING = "Hello Player \nChose from the list:";
 
-    public String optionGame3String() {
-        return "1. New classic game.";
-    }
+    public static final String OPTION_NEW_GAME_STRING = "1. New classic game.";
 
-    public String optionGame5String() {
-        return "2. New R,P,S,L,S game.";
-    }
+    public static final String OPTION_NEW_GAME_SPOCK_STRING = "2. New R,P,S,L,S game.";
 
-    public String optionExitString() {
-        return "3. Exit game.";
-    }
+    public static final String OPTION_EXIT_STRING = "3. Exit game.";
 
-    public String newPlayerString() {
-        return "Creating new player.";
-    }
+    public static final String NEW_PLAYER_STRING = "Creating new player.";
 
-    public String exitGameString() {
-        return "Exiting game";
-    }
+    public static final String EXIT_GAME_STRING = "Exiting game";
 
-    public String choiceString() {
-        return "Choose:";
-    }
+    public static final String CHOICE_STRING = "Choose:";
 }
