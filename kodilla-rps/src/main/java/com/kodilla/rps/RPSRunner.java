@@ -9,23 +9,20 @@ public class RPSRunner {
         int chosenOption;
 
         while (!isGameEnd) {
-            MainMenu mainMenu = new MainMenu(0);
+            MainMenuDisplay mainMenuDisplay = new MainMenuDisplay(0);
             isTheEnd = false;
 
             while (!isTheEnd) {
-                chosenOption = mainMenu.runMainMenu();
+                chosenOption = mainMenuDisplay.runMainMenu();
                 NewGameCreator newGame = new NewGameCreator(false, false, new Player("", 0));
+                NewGameRunner newGameRunner = new NewGameRunner();
 
                 switch (chosenOption) {
                     case 1:
-                        newGame.createNewGameStep1();
-                        newGame.createNewGameStep2();
-                        newGame.runNewGame3();
-                        break;
                     case 2:
                         newGame.createNewGameStep1();
-                        newGame.createNewGameStep2();
-                        newGame.runNewGame5();
+                        int howManyWins = newGame.createNewGameStep2();
+                        newGameRunner.runNewGame(chosenOption, howManyWins);
                         break;
                     case 3:
                         isTheEnd = true;

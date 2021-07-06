@@ -2,13 +2,10 @@ package com.kodilla.rps;
 
 import com.kodilla.rps.strings.RPSGameStrings;
 
-public class InGameMenu {
+public class InGameMenuDisplay {
 
     RPSGameStrings rpsGameStrings = new RPSGameStrings();
     KeyboardReader keyboardReader = new KeyboardReader();
-
-    public InGameMenu() {
-    }
 
     public char runInGameMenu(int gameVersion, int gameCounter) {
         if (gameVersion == 1 || gameVersion == 2){

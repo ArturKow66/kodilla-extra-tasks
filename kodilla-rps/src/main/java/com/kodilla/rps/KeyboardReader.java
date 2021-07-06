@@ -3,14 +3,25 @@ package com.kodilla.rps;
 import java.util.Scanner;
 
 public class KeyboardReader {
+    private String keyboardRead;
     Scanner scanner = new Scanner(System.in);
 
     public String readKeyboard() {
-        return scanner.nextLine();
+        try {
+            keyboardRead = scanner.nextLine();
+        } catch (Exception a) {
+            System.out.println("Exception: " + a);
+        }
+        return keyboardRead;
     }
 
     public char[] readKeyboardToChar() {
-        String s = scanner.nextLine();
-        return s.toCharArray();
+        try {
+            keyboardRead = scanner.nextLine();
+        } catch (Exception a) {
+            System.out.println("Exception: " + a);
+        }
+        keyboardRead = scanner.nextLine();
+        return keyboardRead.toCharArray();
     }
 }

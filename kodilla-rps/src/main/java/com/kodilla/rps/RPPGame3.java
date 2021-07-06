@@ -5,7 +5,7 @@ import com.kodilla.rps.strings.RPSGameStrings;
 import java.util.Random;
 
 public class RPPGame3 {
-
+/*
     private double playerWinsCounter;
     private double computerWinsCounter;
     public int gameCounter;
@@ -15,7 +15,7 @@ public class RPPGame3 {
 
     RPSGameStrings rpsGameStrings = new RPSGameStrings();
     Random random = new Random();
-    InGameMenu inGameMenu = new InGameMenu();
+    InGameMenuDisplay inGameMenuDisplay = new InGameMenuDisplay();
     
     public int runGame3(int gameVersion, int numberOfWins) {
         while (!isRoundFinish) {
@@ -27,7 +27,7 @@ public class RPPGame3 {
                 int rpsPlayerChoiceInt = 0;
                 int rpsComputerChoiceInt = random.nextInt(3) + 1;
 
-                char rpsPlayerChoiceChar = inGameMenu.runInGameMenu(gameVersion, gameCounter);
+                char rpsPlayerChoiceChar = inGameMenuDisplay.runInGameMenu(gameVersion, gameCounter);
 
                 switch (rpsPlayerChoiceChar) {
                     case '1':
@@ -149,5 +149,5 @@ public class RPPGame3 {
             }
         }
         return numberOfWins;
-    }
+    }*/
 }

@@ -5,7 +5,7 @@ import com.kodilla.rps.strings.RPSGameStrings;
 import java.util.Random;
 
 public class RPSGame5 {
-
+/*
     private double playerWinsCounter;
     private double computerWinsCounter;
     public int gameCounter;
@@ -220,5 +220,5 @@ public class RPSGame5 {
             }
         }
         return numberOfWins;
-    }
+    }*/
 }

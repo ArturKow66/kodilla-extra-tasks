@@ -1,22 +1,36 @@
 com/kodilla/rps/Player.java
  com.kodilla.rps.Player
-com/kodilla/rps/KeyboardReader.java
- com.kodilla.rps.KeyboardReader
+com/kodilla/rps/InGameChoiceInfo.java
+ com.kodilla.rps.InGameChoiceInfo
 com/kodilla/rps/strings/RPSGameStrings.java
  com.kodilla.rps.strings.RPSGameStrings
-com/kodilla/rps/MainMenu.java
- com.kodilla.rps.MainMenu
+com/kodilla/rps/InGameChoiceDisplay.java
+ com.kodilla.rps.InGameChoiceDisplay
 com/kodilla/rps/strings/MainMenuOptionsStrings.java
  com.kodilla.rps.strings.MainMenuOptionsStrings
 com/kodilla/rps/strings/NewGameStrings.java
  com.kodilla.rps.strings.NewGameStrings
-com/kodilla/rps/RPSGame5.java
- com.kodilla.rps.RPSGame5
-com/kodilla/rps/InGameMenu.java
- com.kodilla.rps.InGameMenu
-com/kodilla/rps/RPPGame3.java
- com.kodilla.rps.RPPGame3
-com/kodilla/rps/RPSRunner.java
- com.kodilla.rps.RPSRunner
+com/kodilla/rps/LogicEngine.java
+ com.kodilla.rps.LogicEngine
+com/kodilla/rps/ScoreKeeperDisplay.java
+ com.kodilla.rps.ScoreKeeperDisplay
+com/kodilla/rps/NewGameRunner.java
+ com.kodilla.rps.NewGameRunner
 com/kodilla/rps/NewGameCreator.java
  com.kodilla.rps.NewGameCreator
+com/kodilla/rps/RPSGame.java
+ com.kodilla.rps.RPSGame
+com/kodilla/rps/MainMenuDisplay.java
+ com.kodilla.rps.MainMenuDisplay
+com/kodilla/rps/InGameMenuDisplay.java
+ com.kodilla.rps.InGameMenuDisplay
+com/kodilla/rps/KeyboardReader.java
+ com.kodilla.rps.KeyboardReader
+com/kodilla/rps/RPSRunner.java
+ com.kodilla.rps.RPSRunner
+com/kodilla/rps/InGameChoice.java
+ com.kodilla.rps.InGameChoice
+com/kodilla/rps/RPPGame3.java
+ com.kodilla.rps.RPPGame3
+com/kodilla/rps/RPSGame5.java
+ com.kodilla.rps.RPSGame5

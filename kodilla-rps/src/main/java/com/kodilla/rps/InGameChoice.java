@@ -2,88 +2,79 @@ package com.kodilla.rps;
 
 import com.kodilla.rps.strings.RPSGameStrings;
 
-import java.util.ArrayList;
 
 public class InGameChoice {
-    private String playerChoice;
-    private int gameCounter;
-    private int returnWinsCounter;
-    private int rpsPlayerChoiceInt;
-
+    private String playerChoiceString;
+    private int rpsPlayerChoiceInt = 0;
+    private int numberOfOptions;
+    private boolean isReset;
+    private boolean isExit;
+    private boolean isRepeat;
+    private boolean isOptionInteger;
 
 
     RPSGameStrings rpsGameStrings = new RPSGameStrings();
-    RPSGame5 rpsGame5 = new RPSGame5();
+    InGameChoiceInfo inGameChoiceInfo = new InGameChoiceInfo(false, false, false, false, 0, "");
 
-
-    public int runInGameChoice(int gameVersion, int numberOfWins, char rpsPlayerChoiceChar) {
+    public boolean isOptionInteger(char rpsPlayerChoiceChar) {
         try {
             rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
-        } catch (NullPointerException a) {
-            System.out.println();
+            isOptionInteger = true;
+        } catch (Exception a) {
+            System.out.println("Exception: " + a);
+            isOptionInteger = false;
         }
+        return isOptionInteger;
+    }
 
-        ArrayList<Object> choicesArrayList = new ArrayList<>();
+    public InGameChoiceInfo runInGameChoice(int gameVersion, char rpsPlayerChoiceChar) {
+
         if (gameVersion == 1) {
-            for (int i = 0; i<3 ; i++) {
-                choicesArrayList.add(i +1);
-            }
+            numberOfOptions = 3;
         } else if (gameVersion == 2) {
-            for (int i = 0; i<5 ; i++) {
-                choicesArrayList.add(i +1);
-            }
+            numberOfOptions = 5;
         }
 
+        isOptionInteger = isOptionInteger(rpsPlayerChoiceChar);
 
-        if (choicesArrayList.contains(rpsPlayerChoiceInt)) {
+        if (isOptionInteger) {
+            if (rpsPlayerChoiceInt <= numberOfOptions) {
+                switch (rpsPlayerChoiceChar) {
+                    case '1':
+                        playerChoiceString = rpsGameStrings.ROCK_STRING;
+                        rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
+                        break;
+                    case '2':
+                        playerChoiceString = rpsGameStrings.PAPER_STRING;
+                        rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
+                        break;
+                    case '3':
+                        playerChoiceString = rpsGameStrings.SCISSORS_STRING;
+                        rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
+                        break;
+                    case '4':
+                        playerChoiceString = rpsGameStrings.SPOCK_STRING;
+                        rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
+                        break;
+                    case '5':
+                        playerChoiceString = rpsGameStrings.LIZARD_STRING;
+                        rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
+                        break;
+                }
+            }
+        } else {
             switch (rpsPlayerChoiceChar) {
-                case '1':
-                    playerChoice = rpsGameStrings.ROCK_STRING;
-                    rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
-                    break;
-                case '2':
-                    playerChoice = rpsGameStrings.PAPER_STRING;
-                    rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
-                    break;
-                case '3':
-                    playerChoice = rpsGameStrings.SCISSORS_STRING;
-                    rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
-                    break;
-                case '4':
-                    if (gameVersion == 2) {
-                        playerChoice = rpsGameStrings.SPOCK_STRING;
-                        rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
-                        break;
-                    }
-                    break;
-                case '5':
-                    if (gameVersion == 2) {
-                        playerChoice = rpsGameStrings.LIZARD_STRING;
-                        rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
-                        break;
-                    }
-                    break;
-
                 case 'n':
-                    //menuChoice.runMenuChoice('n');
-                    gameCounter = 0;
-                    returnWinsCounter = 0;
-                    rpsGame5.runGame5(gameVersion, numberOfWins);
+                    isReset = true;
                     break;
                 case 'x':
-                    /*
-                    isThisGame = true;
-                    isRoundFinish = true;
-                    rpsComputerChoiceInt = 0;
-                    rpsPlayerChoiceInt = 0;
-                    closeThisGame = true;*/
+                    isExit = true;
                     break;
                 default:
-                    /*gameCounter = gameCounter - 1;
-                    runGame5(gameVersion, numberOfWins);*/
+                    isRepeat = true;
                     break;
             }
         }
-        return rpsPlayerChoiceInt;
+        return inGameChoiceInfo = new InGameChoiceInfo(isReset, isExit, isRepeat, isOptionInteger, rpsPlayerChoiceInt, playerChoiceString);
     }
 }

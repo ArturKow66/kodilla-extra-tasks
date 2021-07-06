@@ -2,14 +2,14 @@ package com.kodilla.rps;
 
 import com.kodilla.rps.strings.MainMenuOptionsStrings;
 
-public class MainMenu {
+public class MainMenuDisplay {
 
     public int chosenOption;
 
     MainMenuOptionsStrings mainMenuOptionsStrings = new MainMenuOptionsStrings();
     KeyboardReader keyboardReader = new KeyboardReader();
 
-    public MainMenu(int chosenOption) {
+    public MainMenuDisplay(int chosenOption) {
         this.chosenOption = chosenOption;
     }
 
@@ -24,7 +24,12 @@ public class MainMenu {
                         mainMenuOptionsStrings.OPTION_NEW_GAME_SPOCK_STRING + "\n" +
                         mainMenuOptionsStrings.OPTION_EXIT_STRING + "\n"
                 );
-                MainMenu.this.chosenOption = Integer.parseInt(keyboardReader.readKeyboard());
+
+                try{
+                    MainMenuDisplay.this.chosenOption = Integer.parseInt(keyboardReader.readKeyboard());
+                } catch (NumberFormatException a){
+                    System.out.println("Exception: " +a);
+                }
 
                 switch (chosenOption) {
                     case 1:
