@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.rps.RPSRunnerTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-07-04T19:59:47" hostname="DESKTOP-7UVQ050" time="0.029">
+<testsuite name="com.kodilla.rps.RPSRunnerTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-06T10:44:28" hostname="DESKTOP-7UVQ050" time="0.032">
   <properties/>
-  <testcase name="testStartNewGame()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.015"/>
-  <testcase name="testQuitGame()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.001"/>
-  <testcase name="testNewPlayer()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.006"/>
-  <testcase name="testResolute()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.0"/>
-  <testcase name="testScoreKeeper()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.001"/>
-  <testcase name="testNewRound()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.001"/>
+  <testcase name="testRunInGameChoice()" classname="com.kodilla.rps.RPSRunnerTestSuite" time="0.032"/>
   <system-out><![CDATA[Test Suite: begin
 Test nr: 1
-Test nr: 1
-Test nr: 1
-Test nr: 1
-Test nr: 1
-Test nr: 1
+Exception: java.lang.NumberFormatException: For input string: "x"
+Exception: java.lang.NumberFormatException: For input string: "n"
 Test Suite: End
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
