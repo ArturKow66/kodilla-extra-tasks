@@ -14,7 +14,6 @@ public class InGameChoice {
             (
                     false,
                     false,
-                    false,
                     false
             );
     InGameChoiceInfo inGameChoiceInfo = new InGameChoiceInfo

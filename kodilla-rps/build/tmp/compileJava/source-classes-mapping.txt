@@ -1,5 +1,5 @@
-com/kodilla/rps/RPPGame3.java
- com.kodilla.rps.RPPGame3
+com/kodilla/rps/game/inGame/display/strings/NewGameStrings.java
+ com.kodilla.rps.game.inGame.display.strings.NewGameStrings
 com/kodilla/rps/game/display/strings/MainMenuOptionsStrings.java
  com.kodilla.rps.game.display.strings.MainMenuOptionsStrings
 com/kodilla/rps/Player.java
@@ -8,31 +8,25 @@ com/kodilla/rps/game/inGame/display/InGameMenuDisplay.java
  com.kodilla.rps.game.inGame.display.InGameMenuDisplay
 com/kodilla/rps/game/inGame/display/InGameChoiceDisplay.java
  com.kodilla.rps.game.inGame.display.InGameChoiceDisplay
-com/kodilla/rps/game/LogicEngine.java
- com.kodilla.rps.game.LogicEngine
-com/kodilla/rps/game/inGame/display/strings/RPSGameStrings.java
- com.kodilla.rps.game.inGame.display.strings.RPSGameStrings
-com/kodilla/rps/RPSGame5.java
- com.kodilla.rps.RPSGame5
-com/kodilla/rps/game/inGame/InGameChoiceInfoLogic.java
- com.kodilla.rps.game.inGame.InGameChoiceInfoLogic
-com/kodilla/rps/game/display/MainMenuDisplay.java
- com.kodilla.rps.game.display.MainMenuDisplay
-com/kodilla/rps/RPSRunner.java
- com.kodilla.rps.RPSRunner
-com/kodilla/rps/game/inGame/display/strings/NewGameStrings.java
- com.kodilla.rps.game.inGame.display.strings.NewGameStrings
-com/kodilla/rps/game/NewGameCreator.java
- com.kodilla.rps.game.NewGameCreator
-com/kodilla/rps/KeyboardReader.java
- com.kodilla.rps.KeyboardReader
-com/kodilla/rps/game/inGame/InGameChoice.java
- com.kodilla.rps.game.inGame.InGameChoice
-com/kodilla/rps/game/inGame/InGameChoiceInfo.java
- com.kodilla.rps.game.inGame.InGameChoiceInfo
 com/kodilla/rps/game/inGame/display/ScoreKeeperDisplay.java
  com.kodilla.rps.game.inGame.display.ScoreKeeperDisplay
-com/kodilla/rps/game/NewGameRunner.java
- com.kodilla.rps.game.NewGameRunner
+com/kodilla/rps/game/inGame/display/strings/RPSGameStrings.java
+ com.kodilla.rps.game.inGame.display.strings.RPSGameStrings
+com/kodilla/rps/KeyboardReader.java
+ com.kodilla.rps.KeyboardReader
+com/kodilla/rps/game/NewGameCreator.java
+ com.kodilla.rps.game.NewGameCreator
+com/kodilla/rps/game/display/MainMenuDisplay.java
+ com.kodilla.rps.game.display.MainMenuDisplay
+com/kodilla/rps/game/inGame/InGameChoiceInfoLogic.java
+ com.kodilla.rps.game.inGame.InGameChoiceInfoLogic
+com/kodilla/rps/RPSRunner.java
+ com.kodilla.rps.RPSRunner
+com/kodilla/rps/game/inGame/InGameChoice.java
+ com.kodilla.rps.game.inGame.InGameChoice
 com/kodilla/rps/game/RPSGame.java
  com.kodilla.rps.game.RPSGame
+com/kodilla/rps/game/inGame/InGameChoiceInfo.java
+ com.kodilla.rps.game.inGame.InGameChoiceInfo
+com/kodilla/rps/game/inGame/display/LogicEngineDisplay.java
+ com.kodilla.rps.game.inGame.display.LogicEngineDisplay

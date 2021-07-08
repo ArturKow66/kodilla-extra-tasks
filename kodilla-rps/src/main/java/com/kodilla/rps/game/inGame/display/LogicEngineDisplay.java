@@ -1,8 +1,8 @@
-package com.kodilla.rps.game;
+package com.kodilla.rps.game.inGame.display;
 
 import com.kodilla.rps.game.inGame.display.strings.RPSGameStrings;
 
-public class LogicEngine {
+public class LogicEngineDisplay {
     private int winner;
 
     RPSGameStrings rpsGameStrings = new RPSGameStrings();

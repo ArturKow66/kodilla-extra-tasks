@@ -29,7 +29,6 @@ public class InGameChoiceInfo {
     }
 
     public void repeatInGameChoice() {
-        this.inGameChoiceInfoLogic.setIsRepeat(true);
         this.inGameChoiceInfoLogic.setIsOptionInteger(false);
         this.rpsPlayerChoiceInt = 0;
     }
@@ -37,7 +36,6 @@ public class InGameChoiceInfo {
     public void resetInGameChoice() {
         this.inGameChoiceInfoLogic.setIsReset(false);
         this.inGameChoiceInfoLogic.setIsExit(false);
-        this.inGameChoiceInfoLogic.setIsRepeat(false);
         this.inGameChoiceInfoLogic.setIsOptionInteger(false);
     }
 }
