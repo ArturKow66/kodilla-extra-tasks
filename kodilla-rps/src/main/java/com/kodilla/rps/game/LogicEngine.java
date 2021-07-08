@@ -1,6 +1,6 @@
-package com.kodilla.rps;
+package com.kodilla.rps.game;
 
-import com.kodilla.rps.strings.RPSGameStrings;
+import com.kodilla.rps.game.inGame.display.strings.RPSGameStrings;
 
 public class LogicEngine {
     private int winner;
@@ -46,7 +46,6 @@ public class LogicEngine {
                         winner = 2;
                         break;
                 }
-
                 break;
 
             case 3:

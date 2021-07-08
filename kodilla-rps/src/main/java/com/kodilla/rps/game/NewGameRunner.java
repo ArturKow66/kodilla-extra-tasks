@@ -1,4 +1,4 @@
-package com.kodilla.rps;
+package com.kodilla.rps.game;
 
 public class NewGameRunner {
 

@@ -1,20 +1,28 @@
-package com.kodilla.rps;
+package com.kodilla.rps.game.inGame;
 
-import com.kodilla.rps.strings.RPSGameStrings;
+import com.kodilla.rps.game.inGame.display.strings.RPSGameStrings;
 
 
 public class InGameChoice {
-    private String playerChoiceString;
     private int rpsPlayerChoiceInt = 0;
     private int numberOfOptions;
-    private boolean isReset;
-    private boolean isExit;
-    private boolean isRepeat;
     private boolean isOptionInteger;
 
 
     RPSGameStrings rpsGameStrings = new RPSGameStrings();
-    InGameChoiceInfo inGameChoiceInfo = new InGameChoiceInfo(false, false, false, false, 0, "");
+    InGameChoiceInfoLogic inGameChoiceInfoLogic = new InGameChoiceInfoLogic
+            (
+                    false,
+                    false,
+                    false,
+                    false
+            );
+    InGameChoiceInfo inGameChoiceInfo = new InGameChoiceInfo
+            (
+                    0,
+                    "",
+                    inGameChoiceInfoLogic
+            );
 
     public boolean isOptionInteger(char rpsPlayerChoiceChar) {
         try {
@@ -36,45 +44,62 @@ public class InGameChoice {
         }
 
         isOptionInteger = isOptionInteger(rpsPlayerChoiceChar);
+        inGameChoiceInfoLogic.setIsOptionInteger(isOptionInteger);
 
         if (isOptionInteger) {
             if (rpsPlayerChoiceInt <= numberOfOptions) {
+                String playerChoiceString;
                 switch (rpsPlayerChoiceChar) {
                     case '1':
                         playerChoiceString = rpsGameStrings.ROCK_STRING;
+                        inGameChoiceInfo.setPlayerChoiceString(playerChoiceString);
                         rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
+                        inGameChoiceInfo.setRpsPlayerChoiceInt(rpsPlayerChoiceInt);
                         break;
                     case '2':
                         playerChoiceString = rpsGameStrings.PAPER_STRING;
+                        inGameChoiceInfo.setPlayerChoiceString(playerChoiceString);
                         rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
+                        inGameChoiceInfo.setRpsPlayerChoiceInt(rpsPlayerChoiceInt);
                         break;
                     case '3':
                         playerChoiceString = rpsGameStrings.SCISSORS_STRING;
+                        inGameChoiceInfo.setPlayerChoiceString(playerChoiceString);
                         rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
+                        inGameChoiceInfo.setRpsPlayerChoiceInt(rpsPlayerChoiceInt);
                         break;
                     case '4':
                         playerChoiceString = rpsGameStrings.SPOCK_STRING;
+                        inGameChoiceInfo.setPlayerChoiceString(playerChoiceString);
                         rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
+                        inGameChoiceInfo.setRpsPlayerChoiceInt(rpsPlayerChoiceInt);
                         break;
                     case '5':
                         playerChoiceString = rpsGameStrings.LIZARD_STRING;
+                        inGameChoiceInfo.setPlayerChoiceString(playerChoiceString);
                         rpsPlayerChoiceInt = Integer.parseInt(String.valueOf(rpsPlayerChoiceChar));
+                        inGameChoiceInfo.setRpsPlayerChoiceInt(rpsPlayerChoiceInt);
                         break;
+                    default:
+                        inGameChoiceInfo.repeatInGameChoice();
                 }
+            } else if (rpsPlayerChoiceInt > numberOfOptions) {
+                inGameChoiceInfo.repeatInGameChoice();
+                return inGameChoiceInfo;
             }
         } else {
             switch (rpsPlayerChoiceChar) {
                 case 'n':
-                    isReset = true;
+                    inGameChoiceInfoLogic.setIsReset(true);
                     break;
                 case 'x':
-                    isExit = true;
+                    inGameChoiceInfoLogic.setIsExit(true);
                     break;
                 default:
-                    isRepeat = true;
+                    inGameChoiceInfo.repeatInGameChoice();
                     break;
             }
         }
-        return inGameChoiceInfo = new InGameChoiceInfo(isReset, isExit, isRepeat, isOptionInteger, rpsPlayerChoiceInt, playerChoiceString);
+        return inGameChoiceInfo;
     }
 }

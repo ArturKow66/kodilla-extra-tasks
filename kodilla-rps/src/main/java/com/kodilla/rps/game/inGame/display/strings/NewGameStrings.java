@@ -1,4 +1,4 @@
-package com.kodilla.rps.strings;
+package com.kodilla.rps.game.inGame.display.strings;
 
 public class NewGameStrings {
 

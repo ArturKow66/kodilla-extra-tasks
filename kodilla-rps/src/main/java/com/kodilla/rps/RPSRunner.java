@@ -1,5 +1,9 @@
 package com.kodilla.rps;
 
+import com.kodilla.rps.game.display.MainMenuDisplay;
+import com.kodilla.rps.game.NewGameCreator;
+import com.kodilla.rps.game.NewGameRunner;
+
 public class RPSRunner {
 
     public static void main(String[] args){

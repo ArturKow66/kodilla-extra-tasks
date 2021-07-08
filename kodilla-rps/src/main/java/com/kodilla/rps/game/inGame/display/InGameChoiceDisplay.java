@@ -1,6 +1,6 @@
-package com.kodilla.rps;
+package com.kodilla.rps.game.inGame.display;
 
-import com.kodilla.rps.strings.RPSGameStrings;
+import com.kodilla.rps.game.inGame.display.strings.RPSGameStrings;
 
 import java.util.Random;
 

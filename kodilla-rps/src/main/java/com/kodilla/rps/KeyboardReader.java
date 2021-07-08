@@ -21,7 +21,6 @@ public class KeyboardReader {
         } catch (Exception a) {
             System.out.println("Exception: " + a);
         }
-        keyboardRead = scanner.nextLine();
         return keyboardRead.toCharArray();
     }
 }

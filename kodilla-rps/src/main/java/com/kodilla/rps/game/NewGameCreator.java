@@ -1,6 +1,8 @@
-package com.kodilla.rps;
+package com.kodilla.rps.game;
 
-import com.kodilla.rps.strings.NewGameStrings;
+import com.kodilla.rps.KeyboardReader;
+import com.kodilla.rps.Player;
+import com.kodilla.rps.game.inGame.display.strings.NewGameStrings;
 
 public class NewGameCreator {
 

@@ -1,6 +1,7 @@
-package com.kodilla.rps;
+package com.kodilla.rps.game.display;
 
-import com.kodilla.rps.strings.MainMenuOptionsStrings;
+import com.kodilla.rps.KeyboardReader;
+import com.kodilla.rps.game.display.strings.MainMenuOptionsStrings;
 
 public class MainMenuDisplay {
 

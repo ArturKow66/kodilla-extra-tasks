@@ -1,4 +1,4 @@
-package com.kodilla.rps.strings;
+package com.kodilla.rps.game.display.strings;
 
 public class MainMenuOptionsStrings {
 

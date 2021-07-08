@@ -1,9 +1,5 @@
 package com.kodilla.rps;
 
-import com.kodilla.rps.strings.RPSGameStrings;
-
-import java.util.Random;
-
 public class RPPGame3 {
 /*
     private double playerWinsCounter;

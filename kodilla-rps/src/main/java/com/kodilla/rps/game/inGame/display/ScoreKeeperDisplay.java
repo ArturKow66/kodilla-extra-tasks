@@ -1,6 +1,6 @@
-package com.kodilla.rps;
+package com.kodilla.rps.game.inGame.display;
 
-import com.kodilla.rps.strings.RPSGameStrings;
+import com.kodilla.rps.game.inGame.display.strings.RPSGameStrings;
 
 public class ScoreKeeperDisplay {
     private boolean isWinner;
@@ -10,7 +10,6 @@ public class ScoreKeeperDisplay {
     RPSGameStrings rpsGameStrings = new RPSGameStrings();
 
     public boolean runScoreKeeper(int winner, int numberOfWins) {
-
         if (winner == 1 && (playerWinsCounter += 1) == numberOfWins) {
             System.out.println(rpsGameStrings.SCORE_STRING + playerWinsCounter + " : " + computerWinsCounter);
             System.out.println(rpsGameStrings.YOU_WON_GAME_STRING);
@@ -24,5 +23,11 @@ public class ScoreKeeperDisplay {
             isWinner = false;
         }
         return isWinner;
+
+    }
+
+    public void resetRunKeeper() {
+        playerWinsCounter = 0;
+        computerWinsCounter = 0;
     }
 }
