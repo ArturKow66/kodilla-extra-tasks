@@ -3,7 +3,7 @@ package com.kodilla.sudoku;
 public class SudokuGame {
 
     public boolean resolveSudoku() {
-        return false;
+        return true;
     }
 
     public static void main(String[] args) {

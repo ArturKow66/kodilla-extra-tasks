@@ -63,7 +63,7 @@ public class RPSRunnerTestSuite {
 
         //When
         System.out.println("Enter: As");
-        String as = keyboardReader.readKeyboard();                      //jak przetestować input z klawiatury?
+        //String as = keyboardReader.readKeyboard();                      //jak przetestować input z klawiatury?
 
         //Then
         //Assertions.assertEquals("As", as);
@@ -76,7 +76,7 @@ public class RPSRunnerTestSuite {
 
         //When
         System.out.println("Input: 3");
-        int newGameStep2 = newGameCreator.createNewGameStep2();         //jak przetestować input z klawiatury?
+        //int newGameStep2 = newGameCreator.createNewGameStep2();         //jak przetestować input z klawiatury?
 
         //Then
         //Assertions.assertEquals(3, newGameStep2);
@@ -184,23 +184,3 @@ public class RPSRunnerTestSuite {
         Assertions.assertEquals(playerChoiceString, inGameChoiceInfoLogic.getPlayerChoiceString());*/
     }
 }
-/*
-case 'n':
-        menuChoice.runMenuChoice('n');
-        gameCounter = 0;
-        returnWinsCounter = 0;
-        rpsGame.runGame(gameVersion, numberOfWins);
-        break;
-case 'x':
-        isThisGame = true;
-        isRoundFinish = true;
-        rpsComputerChoiceInt = 0;
-        rpsPlayerChoiceInt = 0;
-        closeThisGame = true;
-        break;
-default:
-        gameCounter = gameCounter - 1;
-        runGame5(gameVersion, numberOfWins);
-        break;
-
- */
